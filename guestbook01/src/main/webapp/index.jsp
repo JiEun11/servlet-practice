@@ -42,7 +42,7 @@
 			<td>[<%=i %>]</td>
 			<td><%=list.get(i).getName() %></td>
 			<td><%=list.get(i).getRegDate() %></td>
-			<td><a href="/guestbook01/deleteform.jsp?no=<%=list.get(i) %>">삭제</a></td>
+			<td><a href="/guestbook01/deleteform.jsp?no=<%=list.get(i).getNo() %>">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan=4><%=list.get(i).getMessage().replace("\n", "<br>") %></td>

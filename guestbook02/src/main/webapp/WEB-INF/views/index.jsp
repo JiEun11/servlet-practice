@@ -5,7 +5,6 @@
 <%
 	GuestbookDao gdao = new GuestbookDao();
 	List<GuestbookVo> list = gdao.findAll();
-
 %>
 <html>
 <head>
@@ -13,7 +12,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath() %>/add.jsp" method="post">
+	<form action="<%=request.getContextPath() %>/gb?a=add" method="post">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -23,7 +22,7 @@
 			<td colspan=4><textarea name="message" cols=60 rows=5></textarea></td>
 		</tr>
 		<tr>
-			<td colspan=4 align=right><input type="submit" value=" 확인 "></td>
+			<td colspan=4 align=right><input type="submit" value="확인"></td>
 		</tr>
 	</table>
 	</form>
@@ -42,7 +41,7 @@
 			<td>[<%=i %>]</td>
 			<td><%=list.get(i).getName() %></td>
 			<td><%=list.get(i).getRegDate() %></td>
-			<td><a href="/guestbook01/deleteform.jsp?no=<%=list.get(i) %>">삭제</a></td>
+			<td><a href="<%=request.getContextPath() %>/gb?a=delete&?no=<%=list.get(i).getNo() %>">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan=4><%=list.get(i).getMessage().replace("\n", "<br>") %></td>
