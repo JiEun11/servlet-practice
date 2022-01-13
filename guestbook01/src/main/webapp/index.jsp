@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.poscoict.guestbook.dao.*, com.poscoict.guestbook.vo.*, 
+			java.util.List" %>
+<%
+	GuestbookDao gdao = new GuestbookDao();
+	List<GuestbookVo> list = gdao.findAll();
+
+%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,16 +28,24 @@
 	</table>
 	</form>
 	<br>
+	
+	<%
+		for(int i=0; i<list.size();i++){
+	%>
 	<table width=510 border=1>
 		<tr>
-			<td>[1]</td>
-			<td>안대혁</td>
-			<td>2013-01-15</td>
-			<td><a href="/guestbook01/deleteform.jsp?no=1">삭제</a></td>
+			<td>[<%=i %>]</td>
+			<td><%=list.get(i).getName() %></td>
+			<td><%=list.get(i).getRegDate() %></td>
+			<td><a href="/guestbook01/deleteform.jsp?no=<%=list.get(i) %>">삭제</a></td>
 		</tr>
 		<tr>
-			<td colspan=4>안녕하세요</td>
+			<td colspan=4><%=list.get(i).getMessage().replace("\n", "<br>") %></td>
 		</tr>
 	</table>
+<%
+		}
+%>	
+
 </body>
 </html>
