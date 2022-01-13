@@ -8,8 +8,8 @@ import com.poscoict.emaillist.vo.EmaillistVo;
 public class EmaillistDaoTest {
 
 	public static void main(String[] args) {
-		testInsert();
-//		testFindAll();
+//		testInsert();
+		testFindAll();
 	}
 
 	private static void testInsert() {
