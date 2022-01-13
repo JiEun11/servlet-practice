@@ -13,7 +13,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="/guestbook01/add.jsp" method="post">
+	<form action="<%=request.getContextPath() %>/add.jsp" method="post">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -30,7 +30,12 @@
 	<br>
 	
 	<%
+		//int count = list.size();
+		//int index = 0;
+		//GuestbookVo gbvo = new GuestbookVo();
+		// 아래에서 gbvo.getName()으로 쓸 수 있다.
 		for(int i=0; i<list.size();i++){
+		
 	%>
 	<table width=510 border=1>
 		<tr>
