@@ -1,3 +1,14 @@
+show databases;
+
+-- db 생성
+CREATE database webdb;
+
+-- user 생성
+CREATE USER 'webdb'@'localhost' identified by 'webdb';
+
+-- 권한 부여 
+GRANT all privileges on webdb.* to 'webdb'@'localhost';
+
 show tables;
 desc emaillist;
 

@@ -6,5 +6,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>emaillist01</module>
+  	<module>guestbook01</module>
   </modules>
 </project>
