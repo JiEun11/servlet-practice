@@ -21,7 +21,7 @@ public class EmaillistController extends HttpServlet {
 		String actionName = request.getParameter("a");
 
 		if ("form".equals(actionName)) {
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/index.jsp"); // 내부에 있기 때문에 /WEB-INF부터
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/form.jsp"); // 내부에 있기 때문에 /WEB-INF부터
 																								// 시작해주면 된다.
 			rd.forward(request, response);
 
