@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>table.jsp</title>
+<title>table01.jsp</title>
 </head>
 <body>
 	<table border='1px' cellspacing='0' cellpadding='10'>
@@ -19,21 +19,18 @@
 			for(int i = 0; i < nRow; i++){
 		%>
 		<tr>
-			<td>cell(0,0)</td>
-			<td>cell(0,1)</td>
-		</tr>
+			<%
+				for(int j = 0 ; j < nCol; j++){
+			%>
+			<td>cell(<%= i %>,<%= j %>)</td>
+			<%
+				}
+			%>
+			</tr>
 		<%
 			}
 		%>
-		<tr>
-			<td>cell(1,0)</td>
-			<td>cell(1,1)</td>
-		</tr>
-
-		<tr>
-			<td>cell(2,0)</td>
-			<td>cell(2,1)</td>
-		</tr>
+	
 	
 	</table>
 </body>
