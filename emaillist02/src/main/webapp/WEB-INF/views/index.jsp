@@ -1,4 +1,4 @@
-<%@page import="com.poscoict.emaillist02.dao.EmaillistDao, com.poscoict.emaillist02.vo.EmaillistVo,
+<%@page import="com.poscoict.emaillist02.vo.EmaillistVo,
 				java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
