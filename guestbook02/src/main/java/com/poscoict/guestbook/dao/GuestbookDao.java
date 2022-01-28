@@ -166,11 +166,18 @@ public class GuestbookDao {
 		Connection conn = null;
 		try {
 			//1. JDBC 드라이버 로딩
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 			
 			//2. 연결하기
-			String url = "jdbc:mysql://localhost:3306/webdb?characterEncoding=UTF-8&serverTimezone=UTC";
-			conn = DriverManager.getConnection(url, "webdb", "webdb");
+			String url = "jdbc:mysql://192.168.0.68:3307/webdb?characterEncoding=UTF-8&serverTimezone=UTC";
+			conn = DriverManager.getConnection(url, "webdb", "webdb");			
+			
+//			//1. JDBC 드라이버 로딩
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			
+//			//2. 연결하기
+//			String url = "jdbc:mysql://localhost:3306/webdb?characterEncoding=UTF-8&serverTimezone=UTC";
+//			conn = DriverManager.getConnection(url, "webdb", "webdb");
 			
 		} catch (ClassNotFoundException e) {
 			System.out.println("Fail to load a driver.: " + e);
